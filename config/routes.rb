@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  root "listings#index"
   resources :users do
     resources :listings, only: [:show, :index, :new]
   end
