@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
   root "listings#index"
-  resources :users do
-    resources :listings, only: [:show, :index, :new]
-  end
-  devise_for :users
+
+  devise_for :users 
   resources :reports
   resources :responses
+
   resources :categories
   resources :listings
 

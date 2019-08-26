@@ -8,5 +8,6 @@ class User < ApplicationRecord
   has_many :listings
   has_many :responses, through: :listings
   has_many :reports, through: :listings
+  
 
 end
