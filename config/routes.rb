@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root "listings#index"
 
-  devise_for :users, :controller => { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   resources :reports
   resources :responses
   resources :user
