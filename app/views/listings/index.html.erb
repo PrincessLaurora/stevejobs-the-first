@@ -1,5 +1,5 @@
 <h1>Check all listings</h1>
 
 <%@listings.each do |listing|%>
-<li><%=link_to 'listing.title', listing_path%></li>
+<li><%=link_to listing.title, listing_path(listing)%></li>
 <%end%>
