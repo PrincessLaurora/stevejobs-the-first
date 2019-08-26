@@ -16,5 +16,6 @@ class User < ApplicationRecord
     user.uid = auth.info.nuid
     user.email = auth.info.email
     user.password = Devise.friendly_token[0, 20]
+    end
   end
 end

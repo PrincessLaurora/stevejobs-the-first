@@ -2,10 +2,10 @@ Rails.application.routes.draw do
 
   root "listings#index"
 
-  devise_for :users 
+  devise_for :users, :controller => { omniauth_callbacks: 'users/omniauth_callbacks' }
   resources :reports
   resources :responses
-
+  resources :user
   resources :categories
   resources :listings
 
