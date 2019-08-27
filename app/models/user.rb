@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :responses, through: :listings
   has_many :reports, through: :listings
 
+  validates_presence_of :username, :email, :password, :password_confirmation
+
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
