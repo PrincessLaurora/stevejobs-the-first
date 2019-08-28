@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
 
-
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
 
-  root "applications#home"
-  
+
+  root "application#home"
+
   resources :reports
   resources :responses
   resources :user
