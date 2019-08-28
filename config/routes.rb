@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
 
-  root "listings#index"
+  root "applications#home"
   
   resources :reports
   resources :responses
