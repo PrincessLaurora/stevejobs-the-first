@@ -10,11 +10,11 @@ class ListingsController < ApplicationController
   end
 
   def create
-    @listing = Listing.create(listing_params)
+    @listing = Listing.new(listing_params)
     if @listing.save
-      redirect_to listing_path(@listing)
+      redirect_to @listing
     else
-      redirect_to new_listing path
+      redirect_to new_listing_path
     end
   end
 
@@ -25,6 +25,6 @@ class ListingsController < ApplicationController
 private
 
  def listing_params
-   params.require(:listing).permit(:title, :location, :description, :employment_type, :requirements, :restribution)
+   params.require(:listing).permit(:title, :company, :location, :description, :employment_type, :requirements, :retribution, :category_title)
  end
 end

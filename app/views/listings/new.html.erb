@@ -1,4 +1,8 @@
+<div> Choose a category from the list below: </div>
+
+
 <%= form_for @listing do |f| %>
+<%= f.collection_select :category_title, Category.all, :title, :title %><br><br>
 
 <%= f.label :title %>
 <%= f.text_field :title %><br>
@@ -12,7 +16,7 @@
 <%= f.text_area :description %><br>
 <%= f.label :requirements %><br>
 <%= f.text_area :requirements %><br><br>
-<%= f.label :retribution%>
+<%= f.label :retribution, "Retribution (per month): $"%>
 <%= f.number_field :retribution %><br><br>
 
 

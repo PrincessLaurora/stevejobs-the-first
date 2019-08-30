@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
   def home
     @listings = Listing.all
     @categories = Category.all
-    
   end
 
   protected
