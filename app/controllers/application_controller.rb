@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   def home
     @listings = Listing.all
     @categories = Category.all
-    @category = Category.find(params[:id])
+    
   end
 
   protected

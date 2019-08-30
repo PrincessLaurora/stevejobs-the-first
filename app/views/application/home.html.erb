@@ -2,11 +2,11 @@
 
 <% @categories.each do |category| %>
   <%= link_to category.title, category_path(category) %>
-<% end %>
 
 <%category.listings.each do |listing|%>
   <li><%=link_to listing.title, listing_path(listing)%></li>
-<%end%>  
+<%end%>
+<%end%>
 
 <div>
   Are you an Employer? Post a job <%= link_to 'here', new_listing_path%></li>
