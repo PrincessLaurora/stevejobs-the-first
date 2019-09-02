@@ -1,9 +1,9 @@
-<p><strong><%=@listing.title%></p>
-<p><strong>Company: </strong> <%=@listing.company%></p>
-<p><strong>Location: </strong> <%=@listing.location%></p>
-<p><strong>Employment type: <%=@listing.employment_type%></p>
-<p><strong>Description</p>
+<h2><%=@listing.title%></h2>
+<strong>Company: </strong> <%=@listing.company%><br>
+<strong>Location: </strong> <%=@listing.location%><br>
+<strong>Employment type: </strong> <%=@listing.employment_type%><br>
+<strong>Description</strong><br>
 <%=@listing.description%><br>
-<p><strong>Requirments</p>
- <%=@listing.requirements%><br>
-<p><strong>Retribution: $<%@listing.retribution%></p>
+<strong>Requirements</strong><br>
+ <li><%=@listing.requirements%></li>
+<strong>Retribution per month: </strong>$<%=@listing.retribution%>
