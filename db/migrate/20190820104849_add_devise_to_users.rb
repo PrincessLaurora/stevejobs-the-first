@@ -14,7 +14,7 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.2]
       ## Rememberable
       t.datetime :remember_created_at
 
-      Trackable
+      #Trackable
        t.integer  :sign_in_count, default: 0, null: false
        t.datetime :current_sign_in_at
        t.datetime :last_sign_in_at
@@ -34,7 +34,7 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.2]
 
 
       # Uncomment below if timestamps were not included in your original model.
-      t.timestamps null: false
+      #t.timestamps null: false
     end
 
     add_index :users, :email,                unique: true
