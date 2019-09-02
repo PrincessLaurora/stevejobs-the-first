@@ -12,7 +12,7 @@ class ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
     if @listing.save
-      redirect_to @listing
+      redirect_to listing_path(@listing)
     else
       redirect_to new_listing_path
     end
@@ -21,6 +21,8 @@ class ListingsController < ApplicationController
   def show
     @listing = Listing.find(params[:id])
   end
+
+
 
 private
 
