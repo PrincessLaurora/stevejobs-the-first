@@ -38,7 +38,7 @@ gem 'bcrypt'
 gem 'json'
 # Use Unicorn as the app server
 # gem 'unicorn'
-gem  'nokogiri', '~> 1.10.4'
+gem  'nokogiri', '~> 1.13.4'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
